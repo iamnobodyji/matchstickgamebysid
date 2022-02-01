@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Match Stick Game</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="style1.css">
+</head>
+
+<body class="background">
+	
+<h1 class="main grow" id="maintitle"><b>The Matchstick Game!</b></h1><br><br>
+<button id="welclick" style="outline: none;" class="grow dim enter"><b>Enter</b></button>
+	
+<div id="afterclick">
+	<div class="corners">
+<p class="gamer grow"><b>Game Rule</b>s</p><br>
+<ul class="sentences" >
+<li id="demo"></li>
+</ul>
+
+<p class="gamer1">👎 Best of Luck 😅</p>
+<button onclick="pageRedirect8()" id="welclick1" style="outline: none;" class="grow enter2s">&#10142;</button>
+</div>
+
+</div>
+<div id="div1">
+	
+</div>
+</body>
+<script>
+$("#welclick").click(function(){
+  $("#maintitle").hide("slow");
+  $("#welclick").hide("slow");
+  $("#afterclick").css("display","block");
+	typeWriter();
+	setTimeout(function(){ $(".gamer1").css("display","block"); }, 16000);
+  setTimeout(function(){ $("#welclick1").css("display","block"); }, 17000);
+
+});
+var i = 0;
+var txt = 'There are 21 matchsticks. You have to pick a bundle of 1,2,3 or 4 matchsticks. As you pick a bundle, the computer does it picking. Whoever is forced to pick up the last matchstick will loses the game!';
+var speed = 70;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+function pageRedirect8() {
+      window.location.href = "main.html";
+    }
+
+</script>
+</html>

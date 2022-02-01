@@ -1,0 +1,122 @@
+
+.background{
+    background-image: url('images/back1.gif');
+    background-size: cover; 
+    padding:0;
+    margin:0;
+}
+	.main{
+		margin-top: 100px;
+		color: #191970;
+		text-align: center;
+		animation: mymove 5s infinite;
+	}
+	
+@keyframes mymove {
+  from {color: #A52A2A;}
+  to {color: #C71585;}
+}
+.enter{
+	background-color: #4B0082;
+	color: #FFFFFF;
+	width: 200px;
+	padding: 5px;
+	position: absolute;
+	left: 38%;
+	margin: auto;
+	border-radius: 10px;
+	border: 0;
+	font-size: 2vw;
+	outline: none;
+}
+.corners { 
+    background: #36454F;
+    color: #FFFFFF;
+    height: 400px;
+    margin: 50px auto;
+    max-width: 400px;
+    line-height:25px;
+    position: relative;
+    width: 80%;
+    font-family:arial; font-size:14px; font-weight:bold; padding:10px; padding-top:40px;
+    -webkit-box-shadow: 0 1px 7px hsla(0,0%,0%,.2);
+       -moz-box-shadow: 0 1px 7px hsla(0,0%,0%,.2);
+            box-shadow: 0 1px 7px hsla(0,0%,0%,.2);
+}
+
+/* Corner Effect */
+.corners:after,
+.corners:before {
+    background: #e6e6e6;
+    content: '';
+    height: 50px;
+    position: absolute;
+    top: -25px;
+    width: 100px;
+    -webkit-box-shadow: 0 5px 10px -7px hsla(0,0%,0%,.5);
+       -moz-box-shadow: 0 5px 10px -7px hsla(0,0%,0%,.5);
+            box-shadow: 0 5px 10px -7px hsla(0,0%,0%,.5);
+}
+.corners:after {
+    left: -50px;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+.corners:before {
+    right: -50px;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+.gamer{
+	text-align: center;
+	font-family: "Brush Script MT", cursive;
+	font-size: 2vw;
+
+}
+.gamer1{
+	text-align: center;
+	font-family: "Brush Script MT", cursive;
+	font-size: 2vw;
+	display: none;
+}
+.enter2s{
+	border-radius: 50%;
+	background-color: #FF6347;
+	color: #FFFFFF;
+	border: none;
+	height: 30px;
+	width: 30px;
+	float: right;
+}
+
+
+@media screen and (max-width: 720px) {
+	.main{
+		margin-top: 80px;
+	}
+	.enter{
+	width: 120px;
+	padding: 8px;
+	left: 35%;
+	font-size: 5vw;
+}
+.gamer{
+	font-size: 5vw;
+}
+.gamer1{
+	font-size: 5vw;
+}
+}
+#afterclick{
+	display: none;
+}
+#welclick1{
+	display: none;
+}
